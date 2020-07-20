@@ -40,11 +40,11 @@ namespace TeleprompterConsole
                     do 
                     {
                     var key = Console.ReadKey(true);
-                    if (key.KeyChar == '>')
+                    if (key.KeyChar == 'l')                       //delays up the process of echo
                         config.UpdateDelay(-10);
-                    else if (key.KeyChar == '<')
+                    else if (key.KeyChar == 'g')                  // speeds up the process
                         config.UpdateDelay(10);
-                    else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+                    else if (key.KeyChar == 'X' || key.KeyChar == 'x')       // stops the process
                         config.SetDone();
                     } while (!config.Done);
                 };
